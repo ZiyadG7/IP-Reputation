@@ -103,7 +103,7 @@ The machine learning model used in this project is a Random Forest classifier. T
 
 ## Results
 
-The model achieved an accuracy of 74% on the test set, with balanced precision and recall for both benign and malicious classes. Detailed results and evaluation metrics can be found in the `model_evaluation.ipynb` notebook.
+The model achieved an accuracy of 74% on the test set, with balanced precision and recall for both benign and malicious classes.
 
 ## Contributing
 
