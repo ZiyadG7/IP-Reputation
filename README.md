@@ -53,7 +53,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/IPv6_Traffic.git
+   git clone https://github.com/ZiyadG7/IPv6_Traffic.git
    cd IPv6_Traffic
    ```
 
