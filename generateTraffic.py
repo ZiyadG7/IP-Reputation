@@ -62,7 +62,17 @@ def generate_traffic(net, server, subnets):
                 host = subnets[i][j]
                 ipv6_address = host.params['ipv6']
                 writer.writerow([host.name, ipv6_address, 'malicious'])
+
+                                # Number of packets to send
+                num_packets = 1000  # Adjust this number as needed
                 
+                print(f"Starting ICMPv6 flood to {server_ipv6} with {num_packets} packets.")
+                
+                # Send the packets
+                for _ in range(num_packets):
+                    send(icmpv6_packet, verbose=0)
+                    time.sleep(0.01)  # Adding a slight delay to control the flood rate
+                    
                 host.cmd(f'ping6 -c 2 {server_ipv6} &')
                 host.cmd(f'echo "Hello, world!" | socat - UDP6:[{server_ipv6}]:80 &')
                 
